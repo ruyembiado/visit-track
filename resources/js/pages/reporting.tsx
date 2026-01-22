@@ -90,7 +90,7 @@ export default function Reporting() {
                         <select
                             value={year}
                             onChange={(e) => setYear(e.target.value)}
-                            className="rounded border px-3 py-1"
+                            className="rounded border px-3 py-2 text-sm"
                         >
                             {Array.from(
                                 { length: new Date().getFullYear() - 2024 },
@@ -110,7 +110,7 @@ export default function Reporting() {
                         <select
                             value={month}
                             onChange={(e) => setMonth(e.target.value)}
-                            className="rounded border px-3 py-1"
+                            className="rounded border px-3 py-2 text-sm"
                         >
                             {[
                                 'January',
@@ -136,7 +136,7 @@ export default function Reporting() {
                     <div className="flex gap-2">
                         <button
                             onClick={generateReport}
-                            className="flex items-center gap-2 rounded bg-blue-600 px-5 py-1 text-white hover:bg-blue-700"
+                            className="flex items-center text-sm gap-2 rounded bg-blue-600 px-5 py-2 text-white hover:bg-blue-700"
                         >
                             <FileText className="h-4 w-4" />
                             Generate Report
@@ -144,7 +144,7 @@ export default function Reporting() {
 
                         <a
                             href={`/reporting/download?year=${year}&month=${month}`}
-                            className="flex items-center gap-2 rounded bg-red-600 px-5 py-1 text-white hover:bg-red-700"
+                            className="flex items-center text-sm gap-2 rounded bg-red-600 px-5 py-2 text-white hover:bg-red-700"
                             target="_blank"
                         >
                             <DownloadCloud className="h-4 w-4" />
